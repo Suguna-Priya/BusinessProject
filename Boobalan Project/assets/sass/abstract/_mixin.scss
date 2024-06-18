@@ -1,0 +1,42 @@
+@mixin  responsive($breakpoint) {
+
+    //xs = less than 576
+    // sm = 576 and up
+    // md = 768 and up
+    // lg = 992 and up 
+    // xl = 1200 and up 
+    // xxl = 1400 and up 
+
+    @if $breakpoint == xs {
+
+        @media only screen and (max-width:576px){
+            @content;
+        }
+    }
+    @else if $breakpoint == sm {
+        @media only screen and (min-width:576px){
+            @content;
+        }
+    }
+    @else if $breakpoint == md {
+        @media only screen and (min-width:768px){
+            @content;
+        }
+    }
+    @else if $breakpoint == lg{
+        @media only screen and (min-width:992px){
+            @content;
+        }
+    }
+    @else if $breakpoint == xl {
+        @media only screen and (min-width:1200px){
+            @content;
+        }
+    }
+    @else if $breakpoint == xxl {
+        @media only screen and (min-width:1400px){
+            @content;
+        }
+    }
+    
+}

@@ -1,0 +1,103 @@
+@use "../abstract/functions" as func;
+@use "../abstract/mixin";
+
+.pricing{
+    padding: 5rem 20rem;
+    background-color: rgba(230, 230, 230, 0.3);
+    color: func.theme-colors("dark");
+
+    @include mixin.responsive(xs){
+        padding: 2rem 4rem 4rem 4rem;
+
+        .mb-1{
+            font-size: 1.5rem;
+        }
+        
+        h2{
+            margin: 0;
+        }
+
+        
+    }
+
+
+    &-plans{
+
+        display: flex;
+        justify-content: space-around;
+        align-items:flex-start;
+
+        @include mixin.responsive(xs){
+            flex-direction: column;
+            align-items: center;
+        }
+    
+
+
+        &-card{
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 5px 5px 15px rgb(230, 230, 230);
+
+            @include mixin.responsive(xs){
+                margin-top: 1.5rem;
+                padding: 3rem;
+            }
+
+            &-head{
+                text-align: center;
+                h3{
+                    font-size: 1.5rem;
+                }
+
+                &-title{
+                    position: relative;
+                    font-size: 5rem;
+
+                    span{
+                        position: absolute;
+                        font-size: 1.5rem;
+                        top: 18%;
+                    }
+                }
+            }
+
+            &-content{
+                line-height: 2.3;
+            }
+
+        }
+
+    }
+
+    .best{
+        position: relative;
+        
+        &:after{
+            position: absolute;
+            content: "Best";
+            background-color: func.theme-colors();
+            color: #fff;
+            top: 3.5%;
+            right: 37.5%;
+            font-size: .9rem;
+            padding: .1rem 3rem;
+            border-radius: 18px;
+            z-index: 1;
+
+            @include mixin.responsive(xs){
+                top: 31.5%;
+                right: 20%;
+                padding: .3rem 3rem;
+                font-size: 1rem;
+            }
+        
+        }
+    }
+
+  
+    .button{
+        text-align: center;
+    }
+
+}

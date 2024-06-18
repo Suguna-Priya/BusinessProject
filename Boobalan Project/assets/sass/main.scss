@@ -1,0 +1,23 @@
+
+//base
+@import "./base/reset";
+@import "./base/global";
+
+//mixins
+@import "./abstract/mixin";
+
+//layout
+@import "./layout/header";
+@import "./layout/footer";
+
+//components
+@import "./components/button";
+
+//pages
+@import "./pages/hero";
+@import "./pages/company";
+@import "./pages/services";
+@import "./pages/difference";
+@import "./pages/pricingPlan";
+@import "./pages/testimonials";
+@import "./pages/latestNews";

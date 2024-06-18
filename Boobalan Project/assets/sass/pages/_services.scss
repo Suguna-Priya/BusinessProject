@@ -1,0 +1,90 @@
+@use "../abstract/functions" as func;
+@use "../abstract/mixin";
+
+.services{
+    padding-right: 10rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: func.theme-colors("dark");
+
+    @include mixin.responsive(xs){
+        padding: 2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    &-img{
+        width: 50rem;
+        height: 40rem;
+        padding-right: 4rem;
+
+        @include mixin.responsive(xs){
+            width: 40rem;
+            height: 30rem;
+            padding: 0;
+        }
+
+    }
+
+    &-details{
+
+        @include mixin.responsive(xs){
+            margin-top: 1rem;
+
+            p{
+            font-size: 1.6rem;
+            }
+        }
+
+        &-title{
+            font-size: 2rem;
+            line-height: 1.3;
+            //padding: 2rem 0;
+        }
+
+        .first-row, .second-row{
+            display: flex;
+            max-width: 730px;
+            justify-content: space-between;
+
+            @include mixin.responsive(xs){
+                flex-direction: column;
+            }
+
+            .card{
+                @include mixin.responsive(xs){
+                    text-align: center;
+                    margin: 2rem 0 .5rem 0;
+
+                    p{
+                        margin: 0 6rem;
+
+                    }
+                }
+            }
+
+
+            .fa{
+                padding: .5rem 0;
+                font-size: 35px;
+            }
+
+            h3{
+                font-size: 1.6rem;
+                padding-bottom: 1rem;
+
+                @include mixin.responsive(xs){
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    button{
+        @include mixin.responsive(xs){
+            margin-top: 3rem;
+        }
+    }
+}

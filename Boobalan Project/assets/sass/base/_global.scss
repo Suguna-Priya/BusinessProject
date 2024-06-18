@@ -1,0 +1,24 @@
+$value : 1,2,3,4,5,6,7,8,9,10;
+$directions : top, bottom, right, left;
+
+@each $space in $value{
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+
+    .p-#{$space}{
+        padding: #{$space}rem;
+    }
+
+    //creating directions space
+
+    @each $dir in $directions{
+        .m#{str-slice($dir,0,1)}-#{$space}{
+            margin-#{$dir}: #{$space}rem;
+        }
+
+        .p#{str-slice($dir,0,1)}-#{$space}{
+            padding-#{$dir}: #{$space}rem;
+        }
+    }
+}

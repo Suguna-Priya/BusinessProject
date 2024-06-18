@@ -1,0 +1,21 @@
+@use "../abstract/variables" as var;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var.$font-poppins;
+}
+
+a{
+    text-decoration: none;
+}
+
+.font-weight{
+    font-weight: 100;
+}
+
+.background-img{
+    background: url(../assets/img/hero.jpg) no-repeat center;
+    background-size: cover;
+}

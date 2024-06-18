@@ -1,0 +1,48 @@
+@use "../abstract/functions" as func;
+@use "../abstract/mixin";
+
+.difference{
+    padding: 12rem 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    color: func.theme-colors("dark");
+
+    @include mixin.responsive(xs){
+        flex-direction: column;
+        padding: 3rem 4rem;
+        text-align: center;
+    }
+
+
+
+    &-card{
+        text-align: center;
+        max-width: 280px;
+       // border: 1px solid rgba(229, 229, 229, 0.5);
+        padding-top: 1rem;
+        box-shadow: 1px 10px 15px rgb(229, 229, 229);
+
+        @include mixin.responsive(xs){
+            padding: 2rem;
+            margin: 1.5rem 2rem;
+            max-width: none;
+            box-shadow: 1px 5px 8px rgb(229, 229, 229);
+
+            .p-1{
+                margin: 0;
+            }
+        }
+
+        &-title{
+            color: func.theme-colors();
+            position: relative;
+            font-size: 5.5rem;
+            span{
+                font-size: 2.5rem;
+                position: absolute;
+                padding-left: 0.4rem;
+                top: 13%;
+            }
+        }
+    }
+}

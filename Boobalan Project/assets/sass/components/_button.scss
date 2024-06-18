@@ -1,0 +1,51 @@
+@use "../abstract/functions" as func;
+
+.btn{
+    transition: 500ms;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1.3rem 3rem;
+    background-color: func.theme-colors();
+    color: func.theme-colors("white");
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    &:hover{
+        background-color: func.theme-colors("dark");
+    }
+}
+
+.btn-cmp{
+    transition: 500ms;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    background-color: func.theme-colors();
+    color: func.theme-colors("white");
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    &:hover{
+        background-color: func.theme-colors("dark");
+    }
+}
+
+.btn-price{
+    background: transparent;
+    transition: 300ms;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border: 3px solid func.theme-colors();
+    color: func.theme-colors();
+    cursor: pointer;
+    border: none;
+
+    &:hover{
+        background-color: func.theme-colors();
+        color: #fff;
+    }
+}
+

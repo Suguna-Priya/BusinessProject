@@ -1,0 +1,95 @@
+@use "../abstract/functions" as func;
+@use "../abstract/mixin";
+
+.testimonials{
+    padding: 5rem 20rem;
+    color: func.theme-colors("dark");
+
+    @include mixin.responsive(xs){
+        padding: 2rem 4rem;
+
+        .mb-1{
+            font-size: 1.5rem;
+        }
+    }
+
+    &-clients{
+        display: flex;
+        justify-content: space-between;
+
+        @include mixin.responsive(xs){
+            flex-direction: column;
+        }
+
+        &-card{
+            display: flex;
+            flex-direction: column;
+            max-width: 320px;
+            box-shadow: .4px 5px 10px rgba(212, 212, 212, 0.3);
+            
+            @include mixin.responsive(xs){
+               max-width: none;
+               margin: 0;
+               margin: 1.5rem 2rem;
+               box-shadow: 0 3px 5px rgba(212, 212, 212, 0.3);
+
+
+            }
+
+            &-head{
+                padding: 2rem;
+                text-align: center;
+                box-shadow: 0 1px 2px rgb(212, 212, 212);
+                p{
+                    padding: 1rem;
+                }
+            }
+
+            &-user{
+                padding: 2rem;
+                text-align: center;
+                
+                img{
+                    width: 6rem;
+                    height: 6rem;
+                    border-radius: 50%;
+                }
+                h4{
+                    padding-top:1rem;
+                }
+                p{
+                    padding-top: .3rem;
+                    color:rgb(166, 166, 166);
+                }
+            }
+        }
+    }
+
+    .dot{
+        padding-top: 5rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        @include mixin.responsive(xs){
+            display: none;
+        }        
+
+        .circle{
+            margin: 0 .3rem;
+            background-color: gray;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .active{
+            margin: 0 .3rem;
+            background-color: transparent;
+            border: 2px solid func.theme-colors();
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+    }
+}
